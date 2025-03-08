@@ -7,6 +7,7 @@ import ArtistsPage from './pages/ArtistsPage';
 import About from './pages/AboutUs';  
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import AdminLogin from './pages/AdminLogin';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
         </Routes>
      
     </Router> 
