@@ -20,11 +20,12 @@ body {
 }
 
 .logo {
-  height: 48px;
-  width: 48px;
+  height: auto;
+  width: 100px;
+  max-width: 100%;
   margin-right: 8px;
+  background-color: transparent; /* Ensure the logo background is transparent */
 }
-
 .title {
   font-size: 24px;
   font-weight: bold;
@@ -32,7 +33,7 @@ body {
 }
 
 /* Background section */
-.background {
+.background-home-page {
   height: 100vh;
   width: 100%;
   background-image: url('../assets/background.png'); /* Replace with actual background image path */
@@ -51,7 +52,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  
   z-index: 1;
 }
 
@@ -100,4 +101,18 @@ body {
 .home-btn:hover {
   background-color: #eab308;
   transform: scale(1.05);
+}
+
+.welcome-text {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Additional styles for the h1 tag */
+h1 {
+  font-size: 3rem;
+  color: #ffffff; /* Change this color if needed */
+  text-align: center;
+  margin-top: 0;
 }

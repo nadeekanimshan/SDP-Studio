@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import "../styles/AdminLogin.css";
+import "../styles/AdminSignup.css";
 import Navbar from "../pages/navbar";
 
-const AdminLogin = () => {
+const AdminSignup = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
+      const response = await fetch('http://localhost:5000/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -22,13 +27,11 @@ const AdminLogin = () => {
       const data = await response.json();
 
       if (response.ok) {
-        console.log("Login successful:", data);
-        // Save the token to localStorage or state
-        localStorage.setItem('token', data.token);
-        // Navigate to the desired page after successful login
-        navigate('/dashboard'); // Replace '/dashboard' with the actual path you want to navigate to
+        console.log("Signup successful:", data);
+        // Navigate to the login page after successful signup
+        navigate('/admin-login');
       } else {
-        console.error("Login failed:", data.message);
+        console.error("Signup failed:", data.message);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -38,9 +41,9 @@ const AdminLogin = () => {
   return (
     <div>
       <Navbar />
-      <div className="login-container">
-        <h1 className="login-title">Admin Login</h1>
-        <form onSubmit={handleLogin} className="login-form">
+      <div className="signup-container">
+        <h1 className="signup-title">Admin Signup</h1>
+        <form onSubmit={handleSignup} className="signup-form">
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <input
@@ -61,14 +64,21 @@ const AdminLogin = () => {
               required
             />
           </div>
-          <button type="submit" className="login-btn">Login</button>
-          <p className="worker-signup-tage" onClick={() => navigate('/admin-signup')}>
-            Don't have an account? <span className="sign-text">Sign Up</span>
-          </p>
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="signup-btn">Sign Up</button>
         </form>
       </div>
     </div>
   );
 };
 
-export default AdminLogin;
+export default AdminSignup;

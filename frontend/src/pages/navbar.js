@@ -8,25 +8,26 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="flex items-center">
       <NavLink className="navbar-brand">
-          <img src={logo} alt="Ryak Tires Logo" style={{ height: '95px' }} />
+          <img src={logo} alt="Logo"/>
         </NavLink>
       </div>
       <ul className="nav-links">
-        <li className="nav-item">
+        <ul className="nav-item">
           <NavLink to="/" exact activeClassName="active">Home</NavLink>
-        </li>
-        <li className="nav-item">
+        </ul>
+        <ul className="nav-item">
           <NavLink to="/about" activeClassName="active">About us</NavLink>
-        </li>
-        <li className="nav-item">
+        </ul>
+        <ul className="nav-item">
           <NavLink to="/services" activeClassName="active">Services</NavLink>
-        </li>
-        <li className="nav-item">
+        </ul>
+        <ul className="nav-item">
           <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-        </li>
+        </ul>
         <button className="login-btn">
         <NavLink to="/admin-login" className="login-btn">Login</NavLink>
         </button>
+        
       </ul>
     </nav>
   );

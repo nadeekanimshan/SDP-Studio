@@ -1,0 +1,84 @@
+/* Background section */
+.background-start-page {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../assets/background.png'); /* Replace with actual background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .strat-bottons button {
+    background-color: #facc15;
+    color: black;
+
+    padding: 1.1rem;
+    border-radius: 40px;
+    margin-right: 65px;
+    margin-left: 25px;
+    margin-top: 1px;
+    font-size: 25px;
+
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  /* Navbar styles */
+.navbar-start {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.strat-bottons button:hover {
+    background-color: #eab308;
+    transform: scale(1.05);
+  }
+  
+  /* Navbar styles */
+  .navbar-start {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the navbar stays on top */
+  }
+  
+  .navbar-start img {
+    height: 170px;
+    width: auto;  /* Maintain aspect ratio */
+    padding-left: 500px; /* Adjust padding if necessary */
+    padding-top: 35px; /* Adjust padding if necessary */
+        
+  }
+  .navbar-content {
+    display: flex;
+    gap: 34px;
+    padding-right:500px;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    
+    
+  }
+

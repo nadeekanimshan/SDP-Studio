@@ -8,6 +8,8 @@ import About from './pages/AboutUs';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import AdminLogin from './pages/AdminLogin';
+import AdminSignup from './pages/AdminSignup';
+import StartPage from './pages/StartPage';
 
 const App = () => {
   return (
@@ -22,6 +24,9 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin-signup" element={<AdminSignup />} />
+          <Route path="/start-page" element={<StartPage />} />
+          
         </Routes>
      
     </Router> 
