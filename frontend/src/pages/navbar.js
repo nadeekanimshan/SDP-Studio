@@ -7,13 +7,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="flex items-center">
-      <NavLink className="navbar-brand">
+      <NavLink to="/" className="navbar-brand">
           <img src={logo} alt="Logo"/>
         </NavLink>
+        
       </div>
       <ul className="nav-links">
         <ul className="nav-item">
-          <NavLink to="/" exact activeClassName="active">Home</NavLink>
+          <NavLink to="/ClassHomePage" exact activeClassName="active">Home</NavLink>
         </ul>
         <ul className="nav-item">
           <NavLink to="/about" activeClassName="active">About us</NavLink>
@@ -27,6 +28,7 @@ const Navbar = () => {
         <button className="login-btn">
         <NavLink to="/admin-login" className="login-btn">Login</NavLink>
         </button>
+        
         
       </ul>
     </nav>

@@ -1,40 +1,58 @@
 /* Background section */
-.background-services {
-    height: 100vh;
-    width: 100%;
-    background-image: url('../assets/background.png'); /* Replace with actual background image path */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow-y: scroll; /* Enable vertical scrolling */
-  }
-  
-  /* Container styles */
-  .container {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better readability */
-    border-radius: 10px;
-    color: white;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Services list styles */
-  .services-list {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    list-style-type: disc;
-    list-style-position: inside;
-  }
+.background {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../assets/background.png'); /* Replace with actual background image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Container styles */
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background for better readability */
+  border-radius: 10px;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #facc15; /* Bright yellow color */
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.btncalender {
+  background-color: #facc15; /* Bright yellow color */
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.btncalender:hover {
+  background-color: #eab308; /* Darker yellow color */
+  transform: scale(1.05);
+}
+
+.btncalender a {
+  color: black;
+  text-decoration: none;
+}

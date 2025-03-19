@@ -16,9 +16,9 @@ const LandingPage = () => {
       </nav>
       <div className="background-start-page">
         <div className="strat-bottons">
-          <button className="class" onClick={() => navigate('/')}>VOCAL TRAINING CLASSES</button>
+          <button className="class" onClick={() => navigate('/ClassHomePage')}>VOCAL TRAINING CLASSES</button>
           <button className="artist" onClick={() => navigate('/artist')}>ARTIST</button>
-          <button className="recording" onClick={() => navigate('/recording')}>RECORDING APPOINTMENT</button>
+          <button className="RecordingHomePage" onClick={() => navigate('/RecordingHomePage')}>RECORDING APPOINTMENT</button>
         </div>
       </div>
     </div>

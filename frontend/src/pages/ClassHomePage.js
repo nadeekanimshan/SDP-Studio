@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../pages/navbar";
-import "../styles/HomePage.css";
+import "../styles/ClassHomePage.css";
 
-const HomePage = () => {
+const classHomePage = () => {
   return (
     <div>
       <Navbar />
@@ -15,4 +15,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default classHomePage;
